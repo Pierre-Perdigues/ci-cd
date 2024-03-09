@@ -1,0 +1,26 @@
+# Dépendances
+/frontend/node_modules
+/backend/node_modules
+**/node_modules/
+
+# Dossiers de build
+/frontend/build
+/backend/build
+
+# Fichiers de configuration de l'environnement
+/backend/.env
+/frontend/.env
+
+# Fichiers de journalisation
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/backend/npm-debug.log*
+/backend/yarn-debug.log*
+/backend/yarn-error.log*
+
+# Fichier d'environnement Docker
+docker-compose.override.yml
+
+# Répertoire de volume Docker
+docker/volumes/
