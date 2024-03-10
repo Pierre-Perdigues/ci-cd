@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./database');
 const app = express();
-const prenomRoutes = require("./routes/prenom")
+const prenomRoutes = require("./prenom/route-prenom")
 
 const PORT = process.env.PORT || 3001;
 

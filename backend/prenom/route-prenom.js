@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const prenomController = require('../controllers/prenomController');
+const prenomController = require('./controller-prenom');
 
 router.get('/', prenomController.getAllPrenoms);
 
