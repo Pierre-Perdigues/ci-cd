@@ -15,8 +15,9 @@ function PrenomPage() {
     <div>
       <h1>Prénoms</h1>
       <ul>
-        {prenoms.map(prenom => (
-          <li key={prenom}>{prenom}</li>
+        {prenoms.map((prenom, index) => (
+          // Supposant que chaque prénom a une propriété unique, comme idPrenom ou valeurPrenom
+          <li key={index}>{prenom.valeurPrenom}</li> // Utilisez idPrenom comme clé si disponible
         ))}
       </ul>
     </div>

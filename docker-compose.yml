@@ -1,15 +1,5 @@
 version: '3.8'
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "3001:3001"
-    depends_on:
-      - db
-  frontend:
-    build: ./frontend
-    ports:
-      - "80:80"
   db:
     image: mysql:5.7
     volumes:
@@ -21,5 +11,15 @@ services:
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - "3306:3306"
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
 volumes:
   mysql-data:
