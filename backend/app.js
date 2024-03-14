@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const db = require('./database'); // Assurez-vous que ce chemin est correct
+const db = require('./database');
 const app = express();
 
-// Importez vos routes
+// Importation des routes
 const prenomRoutes = require("./prenom/route-prenom");
 const citationRoutes = require('./citation/route-citation');
 
@@ -11,7 +11,7 @@ const citationRoutes = require('./citation/route-citation');
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// Routes de base
 app.get('/', (req, res) => {
   res.json({ message: 'Hello from the backend' });
 });

@@ -1,7 +1,9 @@
 const axios = require('axios');
 
+// recupere la citation
 exports.getCitation = async (req, res) => {
   try {
+    // appell à l'API distante
     const response = await axios.get('https://kaamelott.chaudie.re/api/random');
     const citation = response.data;
     res.json(citation);

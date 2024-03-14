@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function CitationPage() {
+  // Récupération via appel api d'une citation
   const [citation, setCitation] = useState({});
 
   useEffect(() => {
@@ -11,8 +12,6 @@ function CitationPage() {
         console.log("Log de data.citation : ", data.citation);})
       .catch(error => console.error("Il y a eu un problème avec l'opération fetch:", error));
   }, []);
-
-  // console.log("test", citation);
 
   return (
     <div>

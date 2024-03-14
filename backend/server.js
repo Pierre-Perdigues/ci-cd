@@ -1,4 +1,4 @@
-const app = require('./app'); // Importez l'instance app depuis app.js
+const app = require('./app'); 
 
 const PORT = process.env.PORT || 3001;
 

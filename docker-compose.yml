@@ -2,15 +2,16 @@ version: '3.8'
 services:
   db:
     image: mysql:5.7
-    volumes:
-      - mysql-data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: 'monapp'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: monapp
     ports:
       - "3306:3306"
+    volumes:
+      - ./init-db-directory/init.sql:/docker-entrypoint-initdb.d/init-db.sql
+      # - mysql-data:/var/lib/mysql
   backend:
     build: ./backend
     ports:
@@ -21,5 +22,13 @@ services:
     build: ./frontend
     ports:
       - "80:80"
-volumes:
-  mysql-data:
+  jenkins:
+    build: ./Jenkins
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
+      - "5000:5000"
+# volumes:
+#   mysql-data:
+  
