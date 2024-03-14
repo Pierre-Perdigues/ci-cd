@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./init-db-directory:docker-entrypoint-initdb.d
+      - ./init-db-directory:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: 'monapp'
       MYSQL_USER: 'user'
