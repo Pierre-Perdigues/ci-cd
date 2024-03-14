@@ -4,6 +4,7 @@ services:
     image: mysql:5.7
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./init-db-directory
     environment:
       MYSQL_DATABASE: 'monapp'
       MYSQL_USER: 'user'
