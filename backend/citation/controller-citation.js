@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// recuperre la citation
+// recupere la citation
 exports.getCitation = async (req, res) => {
   try {
     // appell à l'API distante

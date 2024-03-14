@@ -1,5 +1,7 @@
 const Prenom = require('./modele-prenom');
 
+// CRUD sur prénom
+//Create
 exports.createPrenom = async (req, res) => {
   try {
     const prenom = await Prenom.create(req.body);
@@ -9,6 +11,7 @@ exports.createPrenom = async (req, res) => {
   }
 };
 
+// Read
 exports.getAllPrenoms = async (req, res) => {
   try {
     const prenoms = await Prenom.findAll();
@@ -18,8 +21,10 @@ exports.getAllPrenoms = async (req, res) => {
   }
 };
 
+// Update
 exports.updatePrenom = async (req, res) => {
   try {
+    // Recherche par id
     const { id } = req.params;
     const [updated] = await Prenom.update(req.body, {
       where: { id: id }
@@ -35,8 +40,10 @@ exports.updatePrenom = async (req, res) => {
   }
 };
 
+// Delete
 exports.deletePrenom = async (req, res) => {
   try {
+    // Recherche par id
     const { id } = req.params;
     const deleted = await Prenom.destroy({
       where: { id: id }

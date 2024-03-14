@@ -6,6 +6,7 @@ import CitationPage from './components/CitationPage';
 
 function App() {
   return (
+    // Configuration des différentes routes sur le frontend
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />

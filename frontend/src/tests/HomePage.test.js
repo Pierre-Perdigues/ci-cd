@@ -5,7 +5,7 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
 describe('HomePage', () => {
-  test('Should render without crash', async () => {
+  test('Doit afficher : Hello from the backend', async () => {
     const mock = new MockAdapter(axios);
     const message = 'Hello from the backend';
     mock.onGet('http://localhost:3001/').reply(200, { message: message });
